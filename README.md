@@ -34,7 +34,7 @@
 ## FrontEnd
 React has been used as usual, using the map method we can render the lists that we have fetched using the restApi from the MongoDb server
 ## BackEnd
-Mongoose and Express have been used to handle the backend, after the setting up the MongoDb database using MongoDb official website and also with the help of MongoDB compass, we can handle each CRUD Operations
+Mongoose and Express have been used to handle the backend, after setting up the MongoDb database using MongoDb official website and also with the help of MongoDB compass, we can handle each CRUD Operations
 
 # Hosting
 * Heroku - For Backend
