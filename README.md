@@ -2,11 +2,13 @@
 
 # simple mern stack
 
-# technologies used
+
 
 # LiveLink
 
 - https://628a7e8434ec3d096c1599ef--jovial-maamoul-f7138a.netlify.app/
+
+# technologies used
 
 - MongoDB
 - Express
