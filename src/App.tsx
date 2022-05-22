@@ -26,7 +26,7 @@ function App() {
   }
   useEffect(() => 
   {
-    Axios.get("http://localhost:3001/getUsers").then((res) => 
+    Axios.get("https://addis-mern-test.herokuapp.com/getUsers").then((res) => 
     {
       setLists(res.data)
       setLoad(true);
@@ -34,7 +34,7 @@ function App() {
   },[])
   const createuser = () => 
   {
-    Axios.post("http://localhost:3001/createUser",
+    Axios.post("https://addis-mern-test.herokuapp.com/createUser",
       {
         Name:Name,
         "Date of birth":DOB,
@@ -50,7 +50,7 @@ function App() {
   const deleteId = (id:any) => 
   {
 
-    Axios.delete(`http://localhost:3001/delete/${id}`).then((response) => 
+    Axios.delete(`https://addis-mern-test.herokuapp.com/delete/${id}`).then((response) => 
     {
         alert('User Deleted');
         window.location.reload();
@@ -59,7 +59,7 @@ function App() {
   }
   const updateUser = (id:any) => 
   {
-    Axios.put('http://localhost:3001/update',
+    Axios.put('https://addis-mern-test.herokuapp.com/update',
     {
         id:id,
         Name:Item
