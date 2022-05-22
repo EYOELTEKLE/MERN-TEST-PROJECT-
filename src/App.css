@@ -1,0 +1,93 @@
+
+.App {
+ margin: 5px; 
+ padding: 0;
+ background-color: lightblue;
+}
+.title
+{
+    display: flex;
+    justify-content: center;
+    color: blue;
+    border: 3px solid red;
+    font-size: 1.5rem;
+    padding: .6rem;
+    margin: 0 30% 0 30%;
+}
+.container
+{
+    display: flex;
+    flex-direction: flex;
+    justify-content: space-between;
+}
+.data
+{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: 15px;
+    width: 200px;
+    height: 200px;
+}
+button
+{
+    align-self: center;
+    width: 60px;
+    height: 20px;
+    background-color: red;
+}
+button:hover
+{
+    background-color: yellow;
+}
+input
+{
+    width: 100px;
+    align-self: center;
+}
+div h1
+{
+    align-self: center;
+    font-size: 1rem;
+    color: blue;
+
+}
+.load
+{
+    margin-top: 280px;
+}
+.Insert
+{
+    text-align: center;
+    font-size: 1.5rem;
+}
+.it
+{
+    display: flex;
+    margin: 5px;
+    flex-direction: column;
+}
+select
+{
+    width: 80px;
+    margin: 5px;
+    align-self: center;
+}
+.it input
+{
+    margin: 6px;
+}
+.it button
+{
+    width: 70px;
+}
+.loader
+{
+    transform: translateX(60px);
+}
+.name
+{
+    color: red;
+    border-bottom: 1px solid black;
+    font-size: 1.5rem;
+}
