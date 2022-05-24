@@ -94,7 +94,7 @@ function App() {
        <div className="load">
        {
 
-        !load && <h1 className="loader">Loading</h1>
+        !load && <div className="loading">Loading</div>
        }
 
        </div>
