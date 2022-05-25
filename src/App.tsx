@@ -112,7 +112,7 @@ function App() {
        {
 
         !load && <Loading>
-          <Fields>Loading</Fields>
+          
           </Loading>
        }
 

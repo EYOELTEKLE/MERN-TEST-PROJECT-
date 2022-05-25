@@ -24,10 +24,13 @@ align-items: center;
 color:chartreuse;
 height:70px;
 width:70px;
-top:7.5%;
+top:8.5%;
 left:50%;
 
 background:red;
+opacity:1;
+border-radius: 7px;
+border:2px solid blue ;
 align-self:center;
 animation-name:${rotation};
 animation-duration:7s;
