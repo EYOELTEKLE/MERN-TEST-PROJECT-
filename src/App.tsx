@@ -4,6 +4,21 @@ import { Counter } from './features/counter/Counter';
 import './App.css';
 import Axios from 'axios'
 import {useState,useEffect} from 'react';
+import Wrapper from './components/Wrapper'
+import Load from './components/Load';
+import Insert from './components/Insert';
+import It from './components/It'
+import Container from './components/Container';
+import NameTitle from './components/NameTitle'
+import Loading from './components/Loading';
+
+import AppContain from './components/App';
+import Banner from './components/Banner';
+import Fields from './components/Fields';
+import Input from './components/Input';
+import Button from './components/Button';
+import Select from './components/Select';
+import Main from './components/Main';
 
 function App() {
   const [lists, setLists] = useState([]);
@@ -68,53 +83,57 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <h1 className="title">CRUD APPLICATION TEST PROJECT</h1>
-       <div className="container">
+    <AppContain>
+      <Banner>
+        <Main>CRUD APPLICATION TEST PROJECT</Main>
+        </Banner>
+       <Container>
           {load && lists.map((items:lists,key) => 
             (
-              <div className="data" key={key}>
-                <h1 className="name">Name: {items.Name}</h1>
-                <h1>Birth Date: {items['Date of birth']}</h1>
-                <h1>Gender: {items.Gender}</h1>
-                <h1>Salary: {items.Salary}</h1>
-                <input type="text" placeholder="Name" onChange={(e) => {setItem(e.target.value)
+              <Wrapper key={key}>
+                <NameTitle>Name: {items.Name}</NameTitle>
+                <Fields>Birth Date: {items['Date of birth']}</Fields>
+                <Fields>Gender: {items.Gender}</Fields>
+                <Fields>Salary: {items.Salary}</Fields>
+                <Input type="text" placeholder="Name" onChange={(e:any) => {setItem(e.target.value)
                   console.log(e.target.value)
-                }}></input>
+                }}></Input>
             
-                <button onClick={() => updateUser(items._id)}>Update</button>
-                <button onClick={() => deleteId(items._id)}>Delete</button>
-          </div>
+                <Button onClick={() => updateUser(items._id)}>Update</Button>
+                <Button onClick={() => deleteId(items._id)}>Delete</Button>
+          </Wrapper>
               
               
             ))}
 
 
-       </div>
-       <div className="load">
+       </Container>
+       <Load>
        {
 
-        !load && <div className="loading">Loading</div>
+        !load && <Loading>
+          <Fields>Loading</Fields>
+          </Loading>
        }
 
-       </div>
-       <br/>
-       <h1 className="Insert">Data Insertion</h1>
-       <div className="it">
-         <input type="text" placeholder="Name" onChange={(e) => setName(e.target.value)}></input>
-         <input type="date" onChange={(e) => setDob(e.target.value)}></input>
-         <select name="select" onChange={(e) => setGender(e.target.value)}>
+       </Load>
+       
+       <Insert>Data Insertion</Insert>
+       <It>
+         <Input type="text" placeholder="Name" onChange={(e:any) => setName(e.target.value)}></Input>
+         <Input type="date" onChange={(e:any) => setDob(e.target.value)}></Input>
+         <Select name="select" onChange={(e:any) => setGender(e.target.value)}>
             <option value="Male" >Male</option> 
             <option value="Female" >Female</option>
-        </select>
-        <input type="number" placeholder="Salary" onChange={(e) => setSalary(parseInt(e.target.value))}></input>
-        <button onClick={createuser}>Insert Data</button>
-       </div>
+        </Select>
+        <Input type="number" placeholder="Salary" onChange={(e:any) => setSalary(parseInt(e.target.value))}></Input>
+        <Button onClick={createuser}>Insert Data</Button>
+       </It>
        
          
          
        
-    </div>
+    </AppContain>
   );
 }
 
