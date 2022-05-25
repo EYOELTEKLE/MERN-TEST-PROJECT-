@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
-import './App.css';
+
 import Axios from 'axios'
 import {useState,useEffect} from 'react';
 import Wrapper from './components/Wrapper'

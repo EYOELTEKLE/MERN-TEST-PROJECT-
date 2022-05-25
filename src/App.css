@@ -48,5 +48,63 @@ select
     margin: 5px;
     align-self: center;
 }
+<<<<<<< HEAD
 
 */
+=======
+.it 
+{
+    border: 2px solid green;
+    margin-left: 35%;
+    margin-right: 35%;
+    background: black;
+}
+.it input
+{
+    margin: 6px;
+    background: white;
+    color: black;
+}
+.it button
+{
+    width: 90px;
+    height: 40px;
+    margin-bottom: 5px;
+    
+}
+.loading
+{
+  position:absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:chartreuse;
+  height:70px;
+  width:70px;
+  top:9%;
+  left:50%;
+  
+  background:red;
+  align-self:center;
+  animation-name:rotation;
+  animation-duration:7s;
+  animation-iteration-count:infinite;
+}
+.name h1
+{
+    color: red;
+    border-bottom: 1px solid black;
+    font-size: 1.5rem;
+}
+@keyframes rotation
+{
+  0%
+  {
+    transform:rotate(0deg)
+  }
+  25%  {transform:rotate(90deg)}
+  50%  {transform:rotate(180deg)}
+  75%  {transform:rotate(270deg)}
+  100% {transform:rotate(360deg)}
+}
+>>>>>>> 26874012953c1879930aa5cb1b95855032c9410d

@@ -6,7 +6,7 @@
 
 # LiveLink
 
-- https://628a7e8434ec3d096c1599ef--jovial-maamoul-f7138a.netlify.app/
+- [https://628a7e8434ec3d096c1599ef--jovial-maamoul-f7138a.netlify.app/](https://jovial-maamoul-f7138a.netlify.app)
 
 # technologies used
 
