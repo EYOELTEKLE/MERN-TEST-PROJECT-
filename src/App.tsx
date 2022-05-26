@@ -86,7 +86,7 @@ function App() {
     <AppContain>
       <Banner>
         <Main>CRUD APPLICATION TEST PROJECT</Main>
-        </Banner>
+      </Banner>
        <Container>
           {load && lists.map((items:lists,key) => 
             (
