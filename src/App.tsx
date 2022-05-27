@@ -1,7 +1,4 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-
+import {useSelector, useDispatch} from 'react-redux'
 import Axios from 'axios'
 import {useState,useEffect} from 'react';
 import Wrapper from './components/Wrapper'
@@ -19,6 +16,7 @@ import Input from './components/Input';
 import Button from './components/Button';
 import Select from './components/Select';
 import Main from './components/Main';
+import setUsers from './features/Users';
 
 function App() {
   const [lists, setLists] = useState([]);
@@ -29,6 +27,9 @@ function App() {
   const [Salary,setSalary] = useState(0);
   const [id,setId] = useState("");
   const [Item,setItem] = useState("");
+  const Loade = useSelector((state:any) => state.users)
+  
+  const dispatch = useDispatch()
   interface lists
   {
     Name:string;
@@ -45,6 +46,7 @@ function App() {
     {
       setLists(res.data)
       setLoad(true);
+      
     })
   },[])
   const createuser = () => 
@@ -81,14 +83,15 @@ function App() {
     })
     window.location.reload();
   }
+  
 
-  return (
+  return ( 
     <AppContain>
       <Banner>
         <Main>CRUD APPLICATION TEST PROJECT</Main>
       </Banner>
        <Container>
-          {load && lists.map((items:lists,key) => 
+          {Loade && lists.map((items:lists,key:number) => 
             (
               <Wrapper key={key}>
                 <NameTitle>Name: {items.Name}</NameTitle>
@@ -110,7 +113,7 @@ function App() {
        </Container>
        <Load>
        {
-
+         
         !load && <Loading>
           
           </Loading>
