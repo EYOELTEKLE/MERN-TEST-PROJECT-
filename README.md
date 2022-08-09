@@ -51,4 +51,5 @@ Mongoose and Express have been used to handle the backend, after setting up the 
 
 ![image](235920.jpg)
 
-
+# Author
+- Eyoel Tekle
